@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>أشداد الكويت | ASHDAD KW - الروابط الرسمية</title>
+    
+    <!-- Google Fonts: Tajawal & Cairo for sleek Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'Cairo', 'sans-serif'],
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            300: '#F3E5AB',
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#AA8C2C',
+                        },
+                        darkBg: '#0a0a0c',
+                        darkCard: '#141418',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar & Glassmorphism utilities */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .dark .glass-card {
+            background: rgba(22, 22, 26, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF3B0 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .light-gold-gradient-text {
+            background: linear-gradient(135deg, #8A6F1D 0%, #D4AF37 60%, #9A7B1C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-glow:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .insta-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .snap-gradient {
+            background: linear-gradient(135deg, #FFFC00 0%, #F5E600 100%);
+        }
+
+        .wa-gradient {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        /* Smooth Link Card Hover Effect */
+        .link-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .link-card:hover {
+            transform: translateY(-3px) scale(1.01);
+        }
+        .link-card:active {
+            transform: translateY(0) scale(0.99);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-darkBg text-slate-800 dark:text-slate-100 min-h-screen flex flex-col justify-between relative overflow-x-hidden transition-colors duration-300">
+
+    <!-- Ambient Background Glows -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-24 -right-24 w-72 h-72 bg-gold-500/15 dark:bg-gold-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute top-1/2 -left-28 w-80 h-80 bg-amber-500/10 dark:bg-gold-600/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-24 right-1/4 w-64 h-64 bg-gold-400/15 dark:bg-gold-500/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Main Container (Mobile Frame on Desktop, Full on Mobile) -->
+    <main class="w-full max-w-md mx-auto px-4 py-6 sm:py-10 relative z-10 flex-grow flex flex-col justify-center">
+        
+        <!-- Card Wrapper -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden transition-all duration-300">
+            
+            <!-- Subtle Top Gold Accent Line -->
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-80"></div>
+
+            <!-- Top Action Bar (Theme Toggle & QR Share) -->
+            <div class="flex justify-between items-center mb-6">
+                <button onclick="openShareModal()" aria-label="مشاركة الصفحة" class="w-10 h-10 rounded-full bg-slate-200/70 dark:bg-white/5 hover:bg-gold-500/20 dark:hover:bg-gold-500/20 text-slate-700 dark:text-gold-400 flex items-center justify-center transition-all duration-200 border border-slate-300/50 dark:border-white/10 shadow-sm hover:scale-105">
+                    <i class="fa-solid fa-qrcode text-lg"></i>
+                </button>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="downloadVCard()" class="px-3.5 py-2 rounded-full bg-gold-500/15 hover:bg-gold-500/25 text-amber-800 dark:text-gold-300 text-xs font-bold flex items-center gap-1.5 border border-gold-500/30 transition-all duration-200 hover:scale-105">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>حفظ جهة الاتصال</span>
+                    </button>
+
+                    <button onclick="toggleTheme()" aria-label="تبديل المظهر" class="w-10 h-10 rounded-full bg-slate-200/70 dark:bg-white/5 hover:bg-gold-500/20 dark:hover:bg-gold-500/20 text-slate-700 dark:text-gold-400 flex items-center justify-center transition-all duration-200 border border-slate-300/50 dark:border-white/10 shadow-sm hover:scale-105">
+                        <i id="theme-icon" class="fa-solid fa-sun text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Profile Header Section -->
+            <div class="text-center mb-8">
+                <!-- Avatar with Animated Ring -->
+                <div class="relative inline-block mb-4 group cursor-pointer" onclick="openShareModal()">
+                    <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-gold-600 via-gold-400 to-amber-200 shadow-xl mx-auto animate-float">
+                        <div class="w-full h-full rounded-full bg-darkCard flex flex-col items-center justify-center relative overflow-hidden border-2 border-darkBg">
+                            <!-- Monogram Logo -->
+                            <span class="font-cairo font-extrabold text-2xl tracking-wider gold-gradient-text select-none">أشداد</span>
+                            <span class="text-[10px] font-bold tracking-[0.25em] text-gold-400/80 uppercase mt-0.5 select-none">ASHDAD KW</span>
+                        </div>
+                    </div>
+                    <!-- Online / Active status indicator -->
+                    <span class="absolute bottom-1.5 right-1.5 w-4 h-4 bg-emerald-500 border-2 border-white dark:border-darkCard rounded-full" title="متاح للتواصل"></span>
+                </div>
+
+                <!-- Title & Verified Badge -->
+                <div class="flex items-center justify-center gap-2 mb-1">
+                    <h1 class="text-2xl font-cairo font-extrabold tracking-tight text-slate-900 dark:text-white">
+                        أشداد الكويت | ASHDAD
+                    </h1>
+                    <!-- Verified Badge -->
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-sky-500 text-white text-[11px] shadow-sm" title="حساب رسمي موثق">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+
+                <p class="text-xs font-mono text-amber-700 dark:text-gold-400/90 font-semibold mb-3 dir-ltr inline-block bg-gold-500/10 px-3 py-0.5 rounded-full border border-gold-500/20">
+                    @ashdadkw
+                </p>
+
+                <!-- Bio Description -->
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-xs mx-auto font-medium">
+                    أهلاً بكم في الصفحة الرسمية لـ <span class="text-amber-700 dark:text-gold-400 font-bold">أشداد</span>. تواصلوا معنا وتابعونا عبر حساباتنا الرسمية.
+                </p>
+            </div>
+
+            <!-- Quick Action Pills (Call & Direct WhatsApp) -->
+            <div class="grid grid-cols-2 gap-3 mb-7">
+                <a href="tel:+96550911177" class="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-gradient-to-r from-amber-600 to-gold-500 hover:from-amber-500 hover:to-gold-400 text-slate-950 font-bold text-sm shadow-lg shadow-gold-500/20 transition-all duration-200 hover:scale-[1.02] active:scale-95">
+                    <i class="fa-solid fa-phone-volume animate-bounce"></i>
+                    <span>اتصال مباشر</span>
+                </a>
+                <a href="https://wa.me/qr/XRXX4CDJ4FR5C1?s=r" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 transition-all duration-200 hover:scale-[1.02] active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>محادثة فورية</span>
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <div class="flex items-center gap-3 mb-5">
+                <div class="h-px bg-slate-300 dark:bg-white/10 flex-grow"></div>
+                <span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">الحسابات الرسمية وطرق التواصل</span>
+                <div class="h-px bg-slate-300 dark:bg-white/10 flex-grow"></div>
+            </div>
+
+            <!-- Links List -->
+            <div class="space-y-3.5">
+
+                <!-- 1. Instagram Link Card -->
+                <div class="link-card group relative rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 p-3.5 flex items-center justify-between gold-border-glow shadow-sm">
+                    <a href="https://www.instagram.com/ashdadkw?exln=MTFiaDZxcWkwcWlmcA==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 flex-grow">
+                        <div class="w-12 h-12 rounded-xl insta-gradient flex items-center justify-center text-white shadow-md shadow-pink-500/20 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="font-bold text-slate-800 dark:text-white text-base group-hover:text-amber-600 dark:group-hover:text-gold-400 transition-colors">تابعنا على إنستغرام</h2>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-mono" dir="ltr">@ashdadkw</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-1">
+                        <button onclick="copyToClipboard('https://www.instagram.com/ashdadkw?exln=MTFiaDZxcWkwcWlmcA==', 'تم نسخ رابط إنستغرام بنجاح!')" title="نسخ الرابط" class="w-9 h-9 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-copy text-sm"></i>
+                        </button>
+                        <a href="https://www.instagram.com/ashdadkw?exln=MTFiaDZxcWkwcWlmcA==" target="_blank" rel="noopener noreferrer" class="w-8 h-9 flex items-center justify-center text-slate-400 group-hover:text-amber-600 dark:group-hover:text-gold-400 group-hover:-translate-x-1 transition-all">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Snapchat Link Card -->
+                <div class="link-card group relative rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 p-3.5 flex items-center justify-between gold-border-glow shadow-sm">
+                    <a href="https://snapchat.com/t/gTaeFXYF" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 flex-grow">
+                        <div class="w-12 h-12 rounded-xl snap-gradient flex items-center justify-center text-slate-900 shadow-md shadow-yellow-400/20 group-hover:scale-110 transition-transform duration-300 shrink-0 border border-yellow-300">
+                            <i class="fa-brands fa-snapchat text-2xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="font-bold text-slate-800 dark:text-white text-base group-hover:text-amber-600 dark:group-hover:text-gold-400 transition-colors">أضفنا على سناب شات</h2>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">يومياتنا وتغطياتنا الحصرية</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-1">
+                        <button onclick="copyToClipboard('https://snapchat.com/t/gTaeFXYF', 'تم نسخ رابط سناب شات بنجاح!')" title="نسخ الرابط" class="w-9 h-9 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-copy text-sm"></i>
+                        </button>
+                        <a href="https://snapchat.com/t/gTaeFXYF" target="_blank" rel="noopener noreferrer" class="w-8 h-9 flex items-center justify-center text-slate-400 group-hover:text-amber-600 dark:group-hover:text-gold-400 group-hover:-translate-x-1 transition-all">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. WhatsApp Official QR Link Card -->
+                <div class="link-card group relative rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 p-3.5 flex items-center justify-between gold-border-glow shadow-sm">
+                    <a href="https://wa.me/qr/XRXX4CDJ4FR5C1?s=r" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 flex-grow">
+                        <div class="w-12 h-12 rounded-xl wa-gradient flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="font-bold text-slate-800 dark:text-white text-base group-hover:text-amber-600 dark:group-hover:text-gold-400 transition-colors">تواصل معنا عبر واتساب</h2>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">خدمة العملاء والاستفسارات المباشرة</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-1">
+                        <button onclick="copyToClipboard('https://wa.me/qr/XRXX4CDJ4FR5C1?s=r', 'تم نسخ رابط واتساب بنجاح!')" title="نسخ الرابط" class="w-9 h-9 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-copy text-sm"></i>
+                        </button>
+                        <a href="https://wa.me/qr/XRXX4CDJ4FR5C1?s=r" target="_blank" rel="noopener noreferrer" class="w-8 h-9 flex items-center justify-center text-slate-400 group-hover:text-amber-600 dark:group-hover:text-gold-400 group-hover:-translate-x-1 transition-all">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Phone Number Interactive Card -->
+                <div class="link-card rounded-2xl bg-gradient-to-br from-amber-500/10 via-white/80 to-gold-500/10 dark:from-gold-500/10 dark:via-white/5 dark:to-transparent border border-gold-500/30 p-4 shadow-sm">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-amber-600 flex items-center justify-center text-slate-950 shadow-md shadow-gold-500/20 shrink-0">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-bold text-amber-700 dark:text-gold-400 block">الخط الساخن المباشر</span>
+                                <a href="tel:+96550911177" class="font-cairo font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white tracking-wider hover:text-amber-600 dark:hover:text-gold-400 transition-colors block" dir="ltr">
+                                    +965 509 11177
+                                </a>
+                            </div>
+                        </div>
+                        <span class="text-[11px] bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full font-bold">
+                            الكويت 🇰🇼
+                        </span>
+                    </div>
+
+                    <!-- Phone Action Sub-buttons -->
+                    <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-200/70 dark:border-white/10">
+                        <a href="tel:+96550911177" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:opacity-90 font-bold text-xs transition-all">
+                            <i class="fa-solid fa-phone-flip text-[11px]"></i>
+                            <span>اتصال</span>
+                        </a>
+                        <button onclick="copyToClipboard('+96550911177', 'تم نسخ الرقم بنجاح! (+965 509 11177)')" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-200/80 dark:bg-white/10 hover:bg-gold-500/20 text-slate-700 dark:text-slate-200 font-bold text-xs transition-all">
+                            <i class="fa-regular fa-copy text-[11px]"></i>
+                            <span>نسخ الرقم</span>
+                        </button>
+                        <a href="https://wa.me/96550911177" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 font-bold text-xs transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>واتساب بالرقم</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer inside Card -->
+            <div class="mt-8 pt-4 border-t border-slate-200/60 dark:border-white/5 text-center">
+                <p class="text-xs text-slate-400 dark:text-slate-500 font-medium">
+                    جميع الحقوق محفوظة © <span id="year"></span> <strong class="text-slate-600 dark:text-slate-400">أشداد الكويت (ASHDAD KW)</strong>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300">
+        <div class="bg-slate-900 dark:bg-gold-500 text-white dark:text-slate-950 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-sm font-bold border border-gold-400/30">
+            <i class="fa-solid fa-circle-check text-emerald-400 dark:text-slate-900 text-base"></i>
+            <span id="toast-message">تم النسخ بنجاح!</span>
+        </div>
+    </div>
+
+    <!-- QR Code & Share Modal -->
+    <div id="share-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white dark:bg-darkCard border border-gold-500/30 rounded-3xl max-w-sm w-full p-6 text-center relative shadow-2xl transform scale-95 transition-transform duration-300" id="share-modal-content">
+            
+            <!-- Close Button -->
+            <button onclick="closeShareModal()" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-300 hover:bg-red-500/20 hover:text-red-500 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/15 border border-gold-500/30 text-amber-600 dark:text-gold-400 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-qrcode text-2xl"></i>
+            </div>
+
+            <h3 class="text-lg font-cairo font-bold text-slate-900 dark:text-white mb-1">رمز الاستجابة السريع (QR)</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-5">امسح الرمز لمتابعة حساب أشداد الكويت مباشرة</p>
+
+            <!-- QR Code Container (Generated dynamically via API for Instagram/Bio) -->
+            <div class="bg-white p-4 rounded-2xl inline-block shadow-inner border border-slate-200 mb-5">
+                <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=141418&bgcolor=ffffff&data=https://www.instagram.com/ashdadkw" alt="QR Code Ashdad KW" class="w-44 h-44 mx-auto rounded-lg" onerror="this.src='https://placehold.co/200x200/141418/D4AF37?text=ASHDAD+KW'">
+            </div>
+
+            <!-- Switch QR Target Tabs -->
+            <div class="flex justify-center gap-2 mb-5">
+                <button onclick="setQR('https://www.instagram.com/ashdadkw', this)" class="qr-tab active-tab text-xs px-3 py-1.5 rounded-xl font-bold bg-gold-500 text-slate-950 transition-all">
+                    إنستغرام
+                </button>
+                <button onclick="setQR('https://snapchat.com/t/gTaeFXYF', this)" class="qr-tab text-xs px-3 py-1.5 rounded-xl font-bold bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300 transition-all">
+                    سناب شات
+                </button>
+                <button onclick="setQR('https://wa.me/qr/XRXX4CDJ4FR5C1?s=r', this)" class="qr-tab text-xs px-3 py-1.5 rounded-xl font-bold bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300 transition-all">
+                    واتساب
+                </button>
+            </div>
+
+            <!-- Native Share / Copy Page Link -->
+            <button onclick="shareOrCopyPage()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-600 to-gold-500 text-slate-950 font-bold text-sm shadow-lg shadow-gold-500/20 flex items-center justify-center gap-2 hover:opacity-95 transition-opacity">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>مشاركة الصفحة مع الأصدقاء</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Theme Toggle Logic (Dark / Light Mode)
+        const htmlElement = document.documentElement;
+        const themeIcon = document.getElementById('theme-icon');
+
+        function toggleTheme() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                showToast('تم تفعيل الوضع النهاري ☀️');
+            } else {
+                htmlElement.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                showToast('تم تفعيل الوضع الليلي الفاخر 🌙');
+            }
+        }
+
+        // Clipboard Copy Function (Compatible with iFrames and Mobile)
+        function copyToClipboard(text, message) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            tempInput.style.position = 'fixed';
+            tempInput.style.opacity = '0';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                document.execCommand('copy');
+                showToast(message || 'تم النسخ إلى الحافظة بنجاح!');
+            } catch (err) {
+                showToast('حدث خطأ أثناء النسخ');
+            }
+
+            document.body.removeChild(tempInput);
+        }
+
+        // Toast Notification Display
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            toast.classList.remove('opacity-0', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-4');
+            }, 2800);
+        }
+
+        // Download vCard (Save Contact directly to Phone)
+        function downloadVCard() {
+            const vCardData = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'FN:أشداد الكويت | ASHDAD KW',
+                'ORG:أشداد الكويت (ASHDAD KW)',
+                'TEL;TYPE=CELL,VOICE:+96550911177',
+                'URL;TYPE=Instagram:https://www.instagram.com/ashdadkw',
+                'URL;TYPE=Snapchat:https://snapchat.com/t/gTaeFXYF',
+                'URL;TYPE=WhatsApp:https://wa.me/qr/XRXX4CDJ4FR5C1?s=r',
+                'NOTE:الصفحة الرسمية لـ أشداد الكويت - تواصلوا معنا عبر حساباتنا الرسمية.',
+                'END:VCARD'
+            ].join('\n');
+
+            const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'Ashdad_KW.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            showToast('جاري حفظ جهة اتصال "أشداد الكويت" 📇');
+        }
+
+        // Modal Logic
+        const shareModal = document.getElementById('share-modal');
+        const shareModalContent = document.getElementById('share-modal-content');
+
+        function openShareModal() {
+            shareModal.classList.remove('hidden');
+            shareModal.classList.add('flex');
+            setTimeout(() => {
+                shareModal.classList.remove('opacity-0');
+                shareModalContent.classList.remove('scale-95');
+                shareModalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeShareModal() {
+            shareModal.classList.add('opacity-0');
+            shareModalContent.classList.remove('scale-100');
+            shareModalContent.classList.add('scale-95');
+            setTimeout(() => {
+                shareModal.classList.remove('flex');
+                shareModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        shareModal.addEventListener('click', (e) => {
+            if (e.target === shareModal) {
+                closeShareModal();
+            }
+        });
+
+        // Switch QR Code between platforms
+        function setQR(url, btnElement) {
+            const qrImg = document.getElementById('qr-image');
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=141418&bgcolor=ffffff&data=${encodeURIComponent(url)}`;
+            
+            // Update active button styling
+            document.querySelectorAll('.qr-tab').forEach(btn => {
+                btn.className = 'qr-tab text-xs px-3 py-1.5 rounded-xl font-bold bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300 transition-all';
+            });
+            btnElement.className = 'qr-tab active-tab text-xs px-3 py-1.5 rounded-xl font-bold bg-gold-500 text-slate-950 transition-all';
+        }
+
+        // Share Page via Web Share API or fallback to copy
+        function shareOrCopyPage() {
+            const shareData = {
+                title: 'أشداد الكويت | ASHDAD KW',
+                text: 'تواصل معنا وتابعنا عبر الحسابات الرسمية لـ أشداد الكويت:',
+                url: window.location.href.startsWith('http') ? window.location.href : 'https://www.instagram.com/ashdadkw'
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData).catch(() => {});
+            } else {
+                copyToClipboard('https://www.instagram.com/ashdadkw?exln=MTFiaDZxcWkwcWlmcA==', 'تم نسخ الرابط للمشاركة!');
+            }
+        }
+    </script>
+</body>
+</html>
